@@ -62,7 +62,7 @@
 /* menu */
   .menu-btn {
     display: flex;
-    margin: 100px 0 0 0;
+    margin: 150px 0 0 0;
   }
   .filter-btn {
     display: block;
@@ -129,7 +129,7 @@
 
   .pos img {
     width: 100%;
-    height: 150px;
+    height: 300px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;

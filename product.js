@@ -63,6 +63,17 @@ const allProducts = () => {
   displayProducts(filteredProducts);
 };
 
+const filterProducts = (category) => {
+    currentPage = 0; 
+    filteredProducts = category ? products.filter(product => product.category.toLowerCase() === category.toLowerCase()) : products;
+    displayProducts(filteredProducts);
+};
+
+const productperPage = (counts) => {
+  productsPerPage = counts;
+  displayProducts(filteredProducts);
+}
+
 const addToCart = (id, title, price) => {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   const itemIndex = cart.findIndex(item => item.id === id);
