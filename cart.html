@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo-navbar"></div>
+      <div class="navtext">
+        <a href="cart.html">Cart</a>
+        <a href="product.html">Product</a>
+      </div>
+    </div>
+
+
+    <div class="cart-container">
+        <h1>Your Cart</h1>
+        <div id="cart-items" class="cart-items"></div>
+        <p>Total Items: <span id="total-items">0</span></p>
+        <p>Total Price: $<span id="total-price">0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+        <br><br>
+        <a href="product.html">Back to Products</a>
+    </div>
+
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <div class="logo-placeholder"></div>
+          <div class="social-media">
+            <p>Follow Us</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-links">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Order</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Product</a></li>
+            </ul>
+          </div>
+          <div class="contact-us">
+            <a href="https://wa.me/+6289637418068" target="_blank"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="product.js"></script> <!-- Link to the same script file -->
+</body>
+</html>
