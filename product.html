@@ -11,14 +11,17 @@
     />
   </head>
   <body>
+    <!--navbar-->
     <div class="navbar">
-      <div class="logo-navbar"></div>
+      <div class="logo-navbar">
+        <h3>TokoSuuuiiiii</h3>
+      </div>
       <div class="navtext">
         <a href="cart.html">Cart</a>
         <a href="product.html">Product</a>
       </div>
     </div>
-    <!--navbar-->
+    
 
     <!-- Filter tombol -->
     <div class="menu-btn">
@@ -31,19 +34,19 @@
 
     <!-- Products per page select -->
     <div class="products-per-page">
-      <label for="productsPerPage">Products per page: </label>
+      <label  for="productsPerPage">Products per page: </label>
       <select id="productsPerPage" onchange="productperPage(this.value)">
         <option value="5">5</option>
         <option value="15" selected>15</option>
-        <option value="45">45</option>
+        <option value="45">45<s/option>
       </select>
     </div>
 
     <div id="deret" class="deret"></div>
 
-    <div class="menu-btn">
-      <button id="prev-button" class="filter-btn" disabled>Sebelumnya</button>
-      <button id="next-button" class="filter-btn" disabled>Selanjutnya</button>
+    <div class="page-btn">
+      <span  id="prev-button" class="arrowLeft"></span>
+      <span  id="next-button" class="arrowRight"></span>
     </div>
 
     <div class="deret2">
