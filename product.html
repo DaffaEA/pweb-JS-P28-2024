@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="product.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo-navbar"></div>
+      <div class="navtext">
+        <a href="cart.html">Cart</a>
+        <a href="product.html">Product</a>
+      </div>
+    </div>
+    <!--navbar-->
+
+    <!-- Filter tombol -->
+    <div class="menu-btn">
+      <h5 class="filter-btn" onclick="allProducts()">All</h5>
+      <h5 class="filter-btn" onclick="filterProducts('beauty')">Beauty</h5>
+      <h5 class="filter-btn" onclick="filterProducts('furniture')">Furniture</h5>
+      <h5 class="filter-btn" onclick="filterProducts('fragrances')">Fragrances</h5>
+      <h5 class="filter-btn" onclick="filterProducts('groceries')">Groceries</h5>
+    </div>
+
+    <!-- Products per page select -->
+    <div class="products-per-page">
+      <label for="productsPerPage">Products per page: </label>
+      <select id="productsPerPage" onchange="productperPage(this.value)">
+        <option value="5">5</option>
+        <option value="15" selected>15</option>
+        <option value="45">45</option>
+      </select>
+    </div>
+
+    <div id="deret" class="deret"></div>
+
+    <div class="menu-btn">
+      <button id="prev-button" class="filter-btn" disabled>Sebelumnya</button>
+      <button id="next-button" class="filter-btn" disabled>Selanjutnya</button>
+    </div>
+
+    <div class="deret2">
+      <div class="pos2">
+        <h2>
+          <a
+            href="https://www.google.com/maps/search/kuburan/@-7.2876023,112.7972864,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
+            >Lokasi</a
+          >
+        </h2>
+      </div>
+      <div class="pos2">
+        <h2><a href="https://www.grab.com/id/food/">grub</a></h2>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <div class="logo-placeholder"></div>
+          <div class="social-media">
+            <p>Follow Us</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-links">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Order</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Product</a></li>
+            </ul>
+          </div>
+          <div class="contact-us">
+            <a href="https://wa.me/+6289637418068" target="_blank"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="product.js"></script>
+  </body>
+</html>
