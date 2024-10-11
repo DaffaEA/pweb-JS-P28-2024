@@ -35,6 +35,8 @@ const displayProducts = (filteredProducts = products) => {
       container.appendChild(productDiv);
     });
 
+    console.log('currentPage:', currentPage, 'start:', start, 'end:', end);
+    console.log('currentProducts:', filterProducts);
     const nextButton = document.getElementById('next-button');
     const prevButton = document.getElementById('prev-button');
     if (nextButton && prevButton) {
@@ -70,7 +72,9 @@ const filterProducts = (category) => {
 };
 
 const productperPage = (counts) => {
-  productsPerPage = counts;
+  productsPerPage = parseInt(counts, 10);
+  if ((currentPage * productsPerPage) + productsPerPage > 30)
+    currentPage = 0;
   displayProducts(filteredProducts);
 }
 
