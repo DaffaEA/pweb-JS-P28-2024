@@ -12,29 +12,66 @@
   </head>
   <body>
     <div class="navbar">
-      <div class="logo-navbar"></div>
+      <div class="logo-navbar">
+        <h3>TokoSuuuiiiii</h3>
+      </div>
       <div class="navtext">
         <a href="cart.html">Cart</a>
         <a href="product.html">Product</a>
       </div>
     </div>
 
-
-    <div class="cart-container">
+  <main>
+    <div class="shopping-bag">
+      <div class="header">
         <h1>Your Cart</h1>
-        <div id="cart-items" class="cart-items"></div>
-        <p>Total Items: <span id="total-items">0</span></p>
-        <p>Total Price: $<span id="total-price">0.00</span></p>
-        <button onclick="checkout()">Checkout</button>
+        <div class="totalPriceHeader">
+          <p class="priceHeader">Price</p>
+          <p class="totalHeader">Total</p>
+        </div>
+      </div>
+
+        <div class="product">
+          <div id="cart-items">
+
+          </div>
+        </div>
         <br><br>
-        <a href="product.html">Back to Products</a>
+        <a class="back-button" href="product.html">Back to Products</a>
     </div>
 
+      <section class="summary">
+
+        <div class="subtotal">
+            <p>Total items</p>
+            <p><span id="total-items">0</span></p>
+        </div>
+        <div class="shipping">
+            <p>Shipping</p>
+            <p>TBD</p>
+        </div>
+        <div class="tax">
+            <p>Sales Tax</p>
+            <p>TBD</p>
+        </div>
+
+        <div class="total-summary">
+            <p>Estimated Total</p>
+            <p>$<span id="total-price">0.00</span></p>
+        </div>
+
+        <button onclick="checkout()" class="checkout-btn">Checkout</button>
+
+        <p>Need help? Call us at +62 896-3741-8068</p>
+    </section>
+  </main>
 
     <footer>
       <div class="footer-container">
         <div class="footer-left">
-          <div class="logo-placeholder"></div>
+          <div class="logo-placeholder">
+            <h2>TokoSuuuiiiii!!!</h2>
+          </div>
           <div class="social-media">
             <p>Follow Us</p>
             <div class="social-icons">
