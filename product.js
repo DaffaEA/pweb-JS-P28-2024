@@ -105,13 +105,34 @@ const updateCart = () => {
       totalPrice += item.price * item.quantity;
 
       const cartItemDiv = document.createElement('div');
+      cartItemDiv.className = 'info';
       cartItemDiv.innerHTML = `
-        <p>${item.title} - $${item.price} x ${item.quantity}</p>
-        <button onclick="removeFromCart(${item.id})">Remove</button>
-        <button onclick="increaseQuantity(${item.id})">+</button>
-        <button onclick="decreaseQuantity(${item.id})">-</button>
+        <p><strong>${item.title}</strong></p>
+        <p>Qty: ${item.quantity}</p>
+        <a onclick="removeFromCart(${item.id})">Remove</button>
+        <a onclick="increaseQuantity(${item.id})">+</button>
+        <a onclick="decreaseQuantity(${item.id})">-</button>
+        
       `;
-      cartItemsDiv.appendChild(cartItemDiv);
+
+      const priceItemDiv = document.createElement('div');
+      priceItemDiv.className = 'price';
+      priceItemDiv.innerHTML = `
+        <p>$${item.price}</p>
+        <p>$${(item.price * item.quantity).toFixed(2)}</p>
+      `;
+
+      // Create a parent div for both item and price
+      const cartRowDiv = document.createElement('div');
+      cartRowDiv.className = 'cart-row'; // Style this as a row with flex/grid if necessary
+      
+      // Append both item info and price to the row
+      cartRowDiv.appendChild(cartItemDiv);
+      cartRowDiv.appendChild(priceItemDiv);
+
+      // Append the row to the parent container (cartItemsDiv)
+      cartItemsDiv.appendChild(cartRowDiv);
+
     });
 
     document.getElementById('total-items').textContent = totalItems;
